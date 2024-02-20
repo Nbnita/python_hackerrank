@@ -9,10 +9,10 @@ from collections import Counter
 
 if __name__ == '__main__':
     s = input()
-    c = Counter(s)
-    for char, count in c.most_common():
-        if count>1:
-            print(char, count)
+    c = Counter(sorted(s))
+    for char, count in c.most_common(3):
+        print(char, count)
+
 
 '''
 Problem
